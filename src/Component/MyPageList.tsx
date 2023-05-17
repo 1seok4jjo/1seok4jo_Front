@@ -35,7 +35,6 @@ export default function MyPageList({myPostList}: MyPagePostListType) {
 
   const handleDeletePost = async (e: React.MouseEvent<HTMLButtonElement>, postId: number) => {
     e.stopPropagation()
-    // console.log('삭제 클릭')
     const confirmed = window.confirm('정말 삭제하시겠습니까?')
     if (!confirmed) {
       return
@@ -52,10 +51,8 @@ export default function MyPageList({myPostList}: MyPagePostListType) {
         navigate('/MyPage')
       } else {
         alert(response.data.message)
-        // console.log(response.data.message)
       }
     } catch (error) {
-      // console.error(error)
       throw error
     }
     setIsMenuOpen(!isMenuOpen)
