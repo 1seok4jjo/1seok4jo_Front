@@ -63,14 +63,11 @@ export default function MyPageList({myPostList}: MyPagePostListType) {
 
   const handleEditPost = (e: React.MouseEvent<HTMLButtonElement>, postId: number) => {
     e.stopPropagation()
-    // console.log('편집 클릭')
     navigate(`/PostEdit/${postId}`)
   }
   const handleOptionClick = (e: React.MouseEvent<HTMLButtonElement>, postId: number) => {
     e.preventDefault()
     e.stopPropagation()
-    // console.log('옵션 클릭')
-    // setIsMenuOpen(!isMenuOpen)
     setOpenMenuPostId(postId === openMenuPostId ? null : postId) // Set the postId to open the menu only for the selected post
   }
 
