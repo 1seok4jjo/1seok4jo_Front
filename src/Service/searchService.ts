@@ -23,6 +23,5 @@ export const fetchSearchApi = async (category: string, searchText: string, count
   }
   const response = await remote(params)
 
-  //   console.log(response)
   return response.data.result
 }
